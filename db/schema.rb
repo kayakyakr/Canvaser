@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100722021412) do
+ActiveRecord::Schema.define(:version => 20100725042132) do
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "groups", ["name"], :name => "index_groups_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

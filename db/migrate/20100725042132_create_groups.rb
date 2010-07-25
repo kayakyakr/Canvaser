@@ -8,7 +8,7 @@ class CreateGroups < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_foreign_key
+    add_index :groups, :name,                :unique => true
   end
 
   def self.down

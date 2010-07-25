@@ -1,0 +1,14 @@
+
+<% form_for(Group.new) do |f| %>
+  <div>
+    <%= f.label :name, "Group Name" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :description, "Description" %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= submit_tag "Create" %>
+  </div>
+<% end %>
