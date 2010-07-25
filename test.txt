@@ -1,0 +1,29 @@
+Using the default profile...
+..P--.P---..F-.F-----
+
+(::) pending steps (::)
+
+features\group_management\groups.feature:12:in `Given I have no groups'
+
+features\group_management\groups.feature:17:in `Given premade group "Group 1"'
+
+(::) failed steps (::)
+
+no button with value or id or text 'create_group' found (Capybara::ElementNotFound)
+./features/step_definitions/web_steps.rb:29:in `block (2 levels) in <top (required)>'
+./features/step_definitions/web_steps.rb:14:in `with_scope'
+./features/step_definitions/web_steps.rb:28:in `/^(?:|I )press "([^"]*)"(?: within "([^"]*)")?$/'
+features\group_management\groups.feature:24:in `When I press "create_group"'
+
+No route matches "/groups/create" with {:method=>:get} (ActionController::RoutingError)
+<internal:prelude>:8:in `synchronize'
+./features/step_definitions/web_steps.rb:20:in `/^(?:|I )am on (.+)$/'
+features\group_management\groups.feature:28:in `Given I am on /groups/create'
+
+Failing Scenarios:
+cucumber features\group_management\groups.feature:22 # Scenario: Visit Create Group Form
+cucumber features\group_management\groups.feature:27 # Scenario: Create Group
+
+4 scenarios (2 failed, 2 pending)
+20 steps (2 failed, 11 skipped, 2 pending, 5 passed)
+0m6.235s
