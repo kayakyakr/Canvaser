@@ -1,1 +1,1778 @@
-# Logfile created on 2010-07-22 22:50:23 -0600
+# Logfile created on 2010-07-22 22:50:23 -0600  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'c21ddc287d8a38d5a7fd55f3d14bae26638f195b', 'aBv31BVZFGeCvsfe1iBn', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:28:55', '2010-07-25 21:28:55')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:28:55) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:28:56) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:28:56', "current_sign_in_at" = '2010-07-25 21:28:56', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:28:56' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 52ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '711c3a6e312808405e9ce21acc33138f64cd2695', 'ejL2_JW4SCUrcsrJA0s9', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:28:56', '2010-07-25 21:28:56')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:28:56) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:28:56', "current_sign_in_at" = '2010-07-25 21:28:56', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:28:56' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'abdce2bae8b64b38777cf1d15bc89aaf20678003', 'whF_zWtjO23PH3lhbe1A', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:28:56', '2010-07-25 21:28:56')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 40ms (View: 40, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:28:56) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:28:56', "current_sign_in_at" = '2010-07-25 21:28:56', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:28:56' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'b2197c0a74f156b78d4dca97255ab2171b9aec7d', 'WCZsKbIV6YA-dQpoJ1R8', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:28:56', '2010-07-25 21:28:56')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:28:56) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:28:56', "current_sign_in_at" = '2010-07-25 21:28:56', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:28:56' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:28:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '5321843a202fda89efd010ddbe78f91ba6944e77', 'bFrCSqpB90YeP0sRF7Gq', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:30:33', '2010-07-25 21:30:33')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:30:33) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 43ms (View: 41, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:30:33) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:30:33', "current_sign_in_at" = '2010-07-25 21:30:33', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:30:33' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 51ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:30:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'c726acc85b4e044ba1da883d7a42b330f1bb4fff', 'iMWdSFzZtN3hxxbb5VNe', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:30:33', '2010-07-25 21:30:33')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:30:33) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:30:33) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:30:33', "current_sign_in_at" = '2010-07-25 21:30:33', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:30:33' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:30:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'd9e65bd4d020bc81dc30ae8ed6d2f33dd7011169', 'J4uPmo4ZnFSsLKb0xv29', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:30:34', '2010-07-25 21:30:34')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 53ms (View: 53, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:30:34) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:30:34', "current_sign_in_at" = '2010-07-25 21:30:34', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:30:34' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '9366447b82076c5fee631fd38cf4633ebd0935c3', 'IGIdR-yfWbZr2IQCH5wL', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:30:34', '2010-07-25 21:30:34')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:30:34) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:30:34', "current_sign_in_at" = '2010-07-25 21:30:34', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:30:34' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:30:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '744be97bb38195aaa0f8e0c7037a035b59a111c8', '29jB0cM2ZxjXXioUSNxs', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:33:50', '2010-07-25 21:33:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:33:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:33:50', "current_sign_in_at" = '2010-07-25 21:33:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:33:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 51ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'a8d1f4249259f9d5bb4ab0e7ffa4eff8705573e5', 'ZLHavTjTZcvzI5woKgOv', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:33:50', '2010-07-25 21:33:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:33:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:33:50', "current_sign_in_at" = '2010-07-25 21:33:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:33:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '9a117817d0e1df0e93e2a9036cac86b8c51e306a', 'jiO9c1Wa2qq-yqxYJSP4', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:33:50', '2010-07-25 21:33:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 37ms (View: 36, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:33:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:33:50', "current_sign_in_at" = '2010-07-25 21:33:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:33:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:33:50) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '1038459274ee2206d113b4194d30420b42db4add', 'e9E8Z248K4svpGXX2_D1', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:33:51', '2010-07-25 21:33:51')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:33:51) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:33:51) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:33:51', "current_sign_in_at" = '2010-07-25 21:33:51', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:33:51' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:33:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '5c28ba9719aa7d504cb4e05114686ec64fbc6ae7', 'x47oLAf-B_NkTMn6DdYy', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:41:18', '2010-07-25 21:41:18')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Rendered users/_user_bar (2.0ms)
+Completed in 48ms (View: 46, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:41:18) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:41:18', "current_sign_in_at" = '2010-07-25 21:41:18', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:41:18' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 58ms (DB: 0) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '77e96b851058be6883f3444e0b3d4e314f62e401', 'wzd5i932thsN63XI51aw', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:41:18', '2010-07-25 21:41:18')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:41:18) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:41:18', "current_sign_in_at" = '2010-07-25 21:41:18', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:41:18' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '5af2b14c094afeb924983a2edb4f0c0ec8914de1', '0nMpvWbBXvHPEWfjwo4i', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:41:18', '2010-07-25 21:41:18')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 41ms (View: 41, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:41:18) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:41:18', "current_sign_in_at" = '2010-07-25 21:41:18', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:41:18' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:41:18) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '2be05dfe01efd1d2e9b2b70f9fe3aa175362f930', 'rodFQveC0pLLF9Ryp5a8', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:41:19', '2010-07-25 21:41:19')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:41:19) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:41:19) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:41:19', "current_sign_in_at" = '2010-07-25 21:41:19', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:41:19' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:41:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '75cf664d2f5584719cc9d0e49c66abb58717db8f', 'pO38zjzmHcXuvCEYbcll', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:42:04', '2010-07-25 21:42:04')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:42:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:42:04) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:42:04', "current_sign_in_at" = '2010-07-25 21:42:04', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:42:04' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 52ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:42:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'a2e90479720c85a7a1f9e9ef89595b5dadd3a4a5', 'UP5rlUZZzZclJEgO4YA6', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:42:04', '2010-07-25 21:42:04')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:42:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 6ms (View: 6, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:42:04) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:42:04', "current_sign_in_at" = '2010-07-25 21:42:04', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:42:04' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:42:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'a0cd9fb5c6a0971a490d14a4cfa3045c2ede4869', 'aZhG0vwJt54j4Lf6E-Z5', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:42:05', '2010-07-25 21:42:05')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 5ms (View: 4, DB: 3) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:42:05) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:42:05', "current_sign_in_at" = '2010-07-25 21:42:05', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:42:05' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 7ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'f68ca7878e3360c047089788102762a8fbb01764', '1bIZM8P35MEOQhNt8myl', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:42:05', '2010-07-25 21:42:05')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:42:05) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:42:05', "current_sign_in_at" = '2010-07-25 21:42:05', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:42:05' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:42:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'ef64f413f2836ae22470856a4a285afaf29f62ff', 'tg7b1Q5B-TWxGf_RngDd', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:43:04', '2010-07-25 21:43:04')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:43:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:43:04) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:43:04', "current_sign_in_at" = '2010-07-25 21:43:04', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:43:04' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 52ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:43:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '79b55224c861cac51000ed641025bbf1bb1642f2', '5cgI26EfDMdjC32GRMdG', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:43:05', '2010-07-25 21:43:05')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:43:05) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:43:05', "current_sign_in_at" = '2010-07-25 21:43:05', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:43:05' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '6cce872b0881621a0983b3bcbdd562b32b948ec5', '7IBrGOoscwq-_vbT5XTR', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:43:05', '2010-07-25 21:43:05')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 53ms (View: 53, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:43:05) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:43:05', "current_sign_in_at" = '2010-07-25 21:43:05', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:43:05' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (2.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (3.0ms)
+Completed in 10ms (View: 9, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'cda41f24cec1218b71e7bde4028fe2b13c3a487c', 'vLEeK5XmxLWuMJ1km-bp', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:43:05', '2010-07-25 21:43:05')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 6ms (View: 5, DB: 3) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:43:05) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:43:05', "current_sign_in_at" = '2010-07-25 21:43:05', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:43:05' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:43:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'fe2f1ddac89d2362f3645c49897f7fecf7f07ebb', 'SlvTb1gtvA1QjAyfY60v', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:44:54', '2010-07-25 21:44:54')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 45ms (View: 43, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:44:54) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:44:54', "current_sign_in_at" = '2010-07-25 21:44:54', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:44:54' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 52ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '5b8ef6714ef63a73e7cec48521a2e99d3598e344', 'CMjRauu_7x_ufN9uA3id', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:44:54', '2010-07-25 21:44:54')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:44:54) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:44:54', "current_sign_in_at" = '2010-07-25 21:44:54', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:44:54' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '89e0ce4ad53b017467c72188ca5e78c5be4e079b', 'cQ_dozkYzrXO8fhciQhA', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:44:54', '2010-07-25 21:44:54')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 43ms (View: 42, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:44:54) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:44:54', "current_sign_in_at" = '2010-07-25 21:44:54', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:44:54' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:44:54) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '9b4dea31ceb09c0d76dccd38561666b17d0dfa14', 'syh4SMtW3iwjxRTlbTUg', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:44:55', '2010-07-25 21:44:55')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:44:55) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:44:55) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:44:55', "current_sign_in_at" = '2010-07-25 21:44:55', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:44:55' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:44:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '185f1e3d04a07e451c62edf19b88503a10581e2f', 'FdeP1L_GYhYOWcWGIl25', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:46:15', '2010-07-25 21:46:15')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:46:15) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 57ms (View: 55, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:46:15) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:46:15', "current_sign_in_at" = '2010-07-25 21:46:15', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:46:15' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 66ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:46:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'f833568981e07630b8c29f93ba9eed83e4bc065a', 'AQE1pLOF6MqaPwVY7Voq', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:46:16', '2010-07-25 21:46:16')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 6, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:46:16) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:46:16', "current_sign_in_at" = '2010-07-25 21:46:16', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:46:16' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '46ae155c949071d14f992a1dd4d4c4933d45e48f', 'nVc8qfJmqZ0CWKlkjyLE', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:46:16', '2010-07-25 21:46:16')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:46:16) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:46:16', "current_sign_in_at" = '2010-07-25 21:46:16', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:46:16' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '3bc77e7cbc2e685029d0147c1b7f25738164893f', 'VvdKDs4ymhQRmdlbKsLk', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:46:16', '2010-07-25 21:46:16')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 6, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:46:16) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:46:16', "current_sign_in_at" = '2010-07-25 21:46:16', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:46:16' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:46:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '177b967e466335913d8674ffc09db2425cbbe6b7', 'BacRbAye3gZGUhPOj1Fw', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:57:50', '2010-07-25 21:57:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:57:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:57:50', "current_sign_in_at" = '2010-07-25 21:57:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:57:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 52ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '2070c869812103c989da44d0ddc838763b00e4a2', 'AonfiqZVWxKgF2igrlQL', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:57:50', '2010-07-25 21:57:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:57:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:57:50', "current_sign_in_at" = '2010-07-25 21:57:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:57:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '2fecbdc12e3a25dfa9128857f25f013c05a478ed', 'GfyebkLHzo23i48bjIrr', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:57:50', '2010-07-25 21:57:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 48ms (View: 48, DB: 3) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:57:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:57:50', "current_sign_in_at" = '2010-07-25 21:57:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:57:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'de49050b7bb13aedea523c5a487d0a41de509840', '2MeqK2SZ7yChUGJZVu4N', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 21:57:50', '2010-07-25 21:57:50')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 16:57:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 16:57:50) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 21:57:50', "current_sign_in_at" = '2010-07-25 21:57:50', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 21:57:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 16:57:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 16:57:51) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '862f1984b007f56468a8616cb17a755d50227520', 'fb967_Y9w0t4apM9eu_n', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 22:03:09', '2010-07-25 22:03:09')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 47ms (View: 45, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 17:03:09) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 22:03:09', "current_sign_in_at" = '2010-07-25 22:03:09', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 22:03:09' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 60ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '6e92a757798091e8707ee1df36189a5e9b500c0b', 'fkawdqXLoXLRo_liQIVH', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 22:03:09', '2010-07-25 22:03:09')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 6, DB: 3) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 17:03:09) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 22:03:09', "current_sign_in_at" = '2010-07-25 22:03:09', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 22:03:09' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '4db137966d276ac092009ce834716c027fb4b2de', 'RbhI_Im2Fglv4Ii5P47w', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 22:03:09', '2010-07-25 22:03:09')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 40ms (View: 39, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 17:03:09) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 22:03:09', "current_sign_in_at" = '2010-07-25 22:03:09', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 22:03:09' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'a4c3f26515b67f3473f526b61e805f1a420430f4', 'ZxA2Nm7QxZkLckeiPvro', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-25 22:03:09', '2010-07-25 22:03:09')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 5ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 17:03:09) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-25 22:03:09', "current_sign_in_at" = '2010-07-25 22:03:09', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-25 22:03:09' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 17:03:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 17:03:10) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '8d34459e9d2a0ea94efc869c74a9e37315771c27', 'uXhv6GHIMXllyj3d_Olc', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:27:51', '2010-07-26 03:27:51')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '8e0c35c3fea6b2f6ea755554e6faa46cb750e3ee', 'iw-_G1cHLzXHq_yIOoiy', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:29:52', '2010-07-26 03:29:52')[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'fffacd0eed6eda42184ce133c74bccd453e9d045', 'oPtsY_MTZWUZ9pe4_Qu1', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:30:52', '2010-07-26 03:30:52')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 44ms (View: 43, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:30:52) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:30:52', "current_sign_in_at" = '2010-07-26 03:30:52', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:30:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 51ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" WHERE ("groups".user_id = 1) [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 3ms (View: 2, DB: 10) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'fe6101a4c060061f6acd809954bb90059b78247f', 'pYJ6XVRMQ1N7Vo23Q7eP', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:30:52', '2010-07-26 03:30:52')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:30:52) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:30:52', "current_sign_in_at" = '2010-07-26 03:30:52', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:30:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'cb1f5212b0e95ebdd5f40f4a12fb7d56ab676024', 'fordDe7HVv9Bl0uz2ipn', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:30:52', '2010-07-26 03:30:52')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 4, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:30:52) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:30:52', "current_sign_in_at" = '2010-07-26 03:30:52', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:30:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 7ms (DB: 0) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'a52107c924c5b67d5fc92210f2fe8b74e1a48141', 'QpbZI75DQ-G0a-vkFlzM', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:30:52', '2010-07-26 03:30:52')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:30:52) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:30:52', "current_sign_in_at" = '2010-07-26 03:30:52', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:30:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:30:52) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'c3b20f3d3ddc042ae80fc14f542f85eb657eeea4', 'BklUUNvIyHm-IXqvv2zX', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:32:29', '2010-07-26 03:32:29')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:32:29) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 67ms (View: 65, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:32:30) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:32:30', "current_sign_in_at" = '2010-07-26 03:32:30', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:32:30' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 65ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" WHERE ("groups".user_id = 1) [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', 'aeaa5134d568e47012a3b6589f835ac4b5691c72', 'dp7uKHPa5iC9dEhlOGIK', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:32:30', '2010-07-26 03:32:30')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:32:30) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:32:30', "current_sign_in_at" = '2010-07-26 03:32:30', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:32:30' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '52e5fe19009aced528e088a3bd9fc59665a08b72', 'JKS25V7cXjqYEW-cmydR', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:32:30', '2010-07-26 03:32:30')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:32:30) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:32:30', "current_sign_in_at" = '2010-07-26 03:32:30', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:32:30' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (1.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '24fad4290e377d941a7e02be7efddfee66fc8ead', '7KhV6U_ZKIkiUGGdZo5v', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:32:30', '2010-07-26 03:32:30')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 5ms (View: 5, DB: 2) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:32:30) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:32:30', "current_sign_in_at" = '2010-07-26 03:32:30', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:32:30' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 6ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:32:30) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '7932ac2e3f564b8ab13b75b9b57e13395df6f4ba', 'lbCn1n5HQxXWotuxw7BD', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:34:52', '2010-07-26 03:34:52')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 55ms (View: 54, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:34:53', "current_sign_in_at" = '2010-07-26 03:34:53', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:34:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 51ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (1.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" WHERE ("groups".user_id = 1) [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '7c7149368a65e04295e73deb7fbf48f0995a8d2e', '8CBlYLfbuLpdi1yxT5ZA', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:34:53', '2010-07-26 03:34:53')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 6ms (View: 6, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:34:53', "current_sign_in_at" = '2010-07-26 03:34:53', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:34:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 2) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '8492e96bdf81b53ae93612b99e2fb1eac63c75fe', 'IiaIV0Nd1s2ZFqBN0UbI', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:34:53', '2010-07-26 03:34:53')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:34:53', "current_sign_in_at" = '2010-07-26 03:34:53', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:34:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 3ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/groups/new]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("email", "encrypted_password", "password_salt", "confirmation_token", "confirmed_at", "confirmation_sent_at", "reset_password_token", "remember_token", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES('paul@gmail.com', '2cf213a1415f6f896e59edfcdc078774c99e99b4', 'qJxOwSuQw9TbHA3aTjv7', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2010-07-26 03:34:53', '2010-07-26 03:34:53')[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://www.example.com/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"user"=>{"email"=>"paul@gmail.com", "password"=>"passypasspass", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'paul@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "last_sign_in_at" = '2010-07-26 03:34:53', "current_sign_in_at" = '2010-07-26 03:34:53', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-07-26 03:34:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/users/sign_in]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered groups/_list_own (0.0ms)
+Rendered groups/_list_member (0.0ms)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (2.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2010-07-25 22:34:53) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://www.example.com/groups/new]
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"group"=>{"name"=>"Group 1", "description"=>"This is my group"}, "commit"=>"Create"}
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-07-25 22:34:53) [POST]
+  Parameters: {"group"=>{"name"=>"Group 1", "description"=>"This is my group"}, "commit"=>"Create"}

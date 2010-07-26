@@ -19,14 +19,25 @@ module NavigationHelpers
     
     when /(\/\w+)+/
       page_name
-      
-    else
-      begin
+    
+    when /the (.*) page/
         page_name =~ /the (.*) page/
         path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
+        path_value = path_components.push('path').join('_').to_sym
+      begin
+        self.send(path_value)
       rescue Object => e
-        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+        raise "Can't find mapping from \"#{page_name}\" to a path. Looked for: \"#{path_value}\"\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+       end
+      
+    else
+        path_components = page_name.split(/\s+/)
+        path_value = path_components.push('path').join('_').to_sym
+      begin
+        self.send(path_value)
+      rescue Object => e
+        raise "Can't find mapping from \"#{page_name}\" to a path. Looked for: \"#{path_value}\"\n" +
           "Now, go and add a mapping in #{__FILE__}"
       end
     end

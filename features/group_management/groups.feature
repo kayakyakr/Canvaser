@@ -21,15 +21,15 @@ Feature: Group Management
 
   Scenario: Visit Create Group Form
     Given I am on the homepage
-    When I press "create_group"
-    Then I should be on /groups/create
+    When I follow "New Group"
+    Then I should be on new group
     
   Scenario: Create Group
-    Given I am on /groups/create
+    Given I am on new group
     When I fill in the following:
-    | Group Name        | Group 1          | 
-    | Group Description | This is my group |
-    And I press "Save"
+    | Group Name  | Group 1          | 
+    | Description | This is my group |
+    And I press "Create"
     Then I should be on the homepage
     And I should see 1 group
     And the following groups should exist

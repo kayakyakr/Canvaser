@@ -1,7 +1,12 @@
 
 
 Given /^I have no groups$/ do
-  pending # express the regexp above with the code you wish you had
+  if get_current_user.groups.size != 0
+    get_current_user.groups.each do |group|
+      group.destroy
+    end
+  end 
+  
 end
 
 Then /^I should see (\d+) groups?$/ do |arg1|

@@ -1,9 +1,11 @@
 
 
 Given /^I am a new user with email "([^"]*)" and password "([^"]*)"$/ do |email, password|
-   User.new(:email => email,
+   user = User.new(:email => email,
             :password => password,
-            :password_confirmation => password).save!
+            :password_confirmation => password)
+   user.save!
+   save_current_user_id(user.email)
 end
 
 Given /^I am logged in as "([^"]*)"$/ do |email|
