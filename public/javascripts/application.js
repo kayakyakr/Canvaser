@@ -1,7 +1,3 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-Ext.onReady(function()
-{
-  // For the time being, we're going to start rolling some ext layout stuff here.
-})
