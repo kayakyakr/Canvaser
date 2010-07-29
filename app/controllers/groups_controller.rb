@@ -1,14 +1,10 @@
 class GroupsController < ApplicationController
+  layout proc { |controller| controller.request.xhr? ? nil : 'application' }
+  
   def new
   end
   
   def create
-  end
-
-  def list_own
-  end
-
-  def list_member
   end
 
   def search

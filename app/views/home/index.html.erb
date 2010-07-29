@@ -2,7 +2,7 @@
 <h1>My Groups</h1>
 
 <div id="ownedGroups">
-  <%= render :partial => 'groups/list_own' %>
+  <%= render :partial => 'groups/list_own', :object => current_user.own_groups %>
 </div>
 
 <div id="memberGroups">

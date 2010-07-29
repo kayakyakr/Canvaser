@@ -14,6 +14,12 @@ var Layout = Ext.extend(Ext.util.Observable, {
   
   createViewport: function()
   {
+    this.tabPanel = new Ext.TabPanel({
+      region: 'center',
+      activeTab: 0,
+      items: {title: 'Home', html:'replace this with the first of the updater panels'}      
+    });
+    
     new Ext.Viewport({
       layout:'border',
       items:[{
@@ -24,22 +30,39 @@ var Layout = Ext.extend(Ext.util.Observable, {
           tbar: [{
                   text: 'Canvaser',
                   menu: {
-                    items:[{ text: 'Item1'},
+                    items:[{ text: 'New Group', handler: this.loadNewTab.curry('New Group', '../groups/new'), scope: this},
                            { text: 'Item2'}
                           ]
                   }
           },{text:'asdf'}]        
         }]
-      }, {
-        region: 'center',
-        xtype: 'tabpanel',
-        items: {title: 'Home', html:'replace this with the first of the updater panels'}
-      }]
+      }, this.tabPanel
+      ]
     });
   },
   
-  fillViewport: function()
+  loadNewTab: function(title, htmlSource)
   {
-    
+    var panel = new Ext.Panel({
+      title: title,
+      listeners: {
+        afterrender: function()
+        {
+          try
+          {
+            var mgr = panel.getUpdater();
+            mgr.update({
+              url: htmlSource
+            });
+          }
+          catch(e)
+          {
+            alert(e);
+          }          
+        }
+      }
+    });
+    this.tabPanel.add(panel);
+    this.tabPanel.activate(panel);
   }
 });

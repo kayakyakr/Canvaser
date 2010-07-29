@@ -7,4 +7,5 @@ class HomeController < ApplicationController
 
   def index_ext
   end
+  
 end
