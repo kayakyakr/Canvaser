@@ -1,3 +1,11 @@
 
 
-<%= link_to content_tag(:div, 'Join Group'), search_groups_path, :class => 'largeButton' %>
+<%= link_to 'Join Group', search_groups_path, :class => 'largeButton' %>
+
+<% if @group_list %>
+<ul>
+  <% @group_list.each do |g| %>
+  <li><%= g.name %></li>  
+  <% end %>
+</ul>
+<% end %>

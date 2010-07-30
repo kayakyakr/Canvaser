@@ -1,3 +1,11 @@
 
 
-<%= link_to content_tag(:div, 'New Group'), new_group_path, :class => 'largeButton' %>
+<%= link_to 'New Group', new_group_path, :class => 'largeButton' %>
+
+<% if groups_owned %>
+<ul>
+  <% groups_owned.each do |g| %>
+  <li><%= g.name %></li>  
+  <% end %>
+</ul>
+<% end %>

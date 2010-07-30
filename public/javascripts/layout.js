@@ -26,15 +26,14 @@ var Layout = Ext.extend(Ext.util.Observable, {
         region: 'north',
         autoHeight: true,
         items:[{ 
-          html: '<h1>Canvaser</h1>',
-          tbar: [{
-                  text: 'Canvaser',
-                  menu: {
+          contentEl: 'user_bar',
+          tbar: [{ text:'Groups',
+                    menu: { 
                     items:[{ text: 'New Group', handler: this.loadNewTab.curry('New Group', '../groups/new'), scope: this},
-                           { text: 'Item2'}
+                           { text: 'My Groups', handler: this.loadNewTab.curry('My Groups', '../groups/list_own'), scope: this}
                           ]
-                  }
-          },{text:'asdf'}]        
+                  }},
+                  {text:'asdf'}]        
         }]
       }, this.tabPanel
       ]
@@ -52,17 +51,38 @@ var Layout = Ext.extend(Ext.util.Observable, {
           {
             var mgr = panel.getUpdater();
             mgr.update({
-              url: htmlSource
+              url: htmlSource,
+              callback: this.setupUpdated,
+              scope: this
             });
           }
           catch(e)
           {
             alert(e);
           }          
-        }
+        },
+        scope: this
       }
     });
     this.tabPanel.add(panel);
     this.tabPanel.activate(panel);
+  },
+  
+  setupUpdated: function(el)
+  {
+    var els = el.select('a');
+    els.each(function(a){
+      var href = a.dom.href;
+      a.dom.href = '#';
+      a.addListener('click', function(panel, href)
+      {        
+        var mgr = panel.getUpdater();
+        mgr.update({
+          url: href,
+          callback: this.setupUpdated,
+          scope: this
+        });
+      }.curry(el, href))
+    }, this);
   }
 });
