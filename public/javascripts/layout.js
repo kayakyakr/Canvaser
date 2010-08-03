@@ -42,47 +42,14 @@ var Layout = Ext.extend(Ext.util.Observable, {
   
   loadNewTab: function(title, htmlSource)
   {
-    var panel = new Ext.Panel({
+    var panel = new Ext.AjaxPanel({
       title: title,
-      listeners: {
-        afterrender: function()
-        {
-          try
-          {
-            var mgr = panel.getUpdater();
-            mgr.update({
-              url: htmlSource,
-              callback: this.setupUpdated,
-              scope: this
-            });
-          }
-          catch(e)
-          {
-            alert(e);
-          }          
-        },
-        scope: this
-      }
+      listeners: {        
+      },
+      url: htmlSource
     });
     this.tabPanel.add(panel);
     this.tabPanel.activate(panel);
   },
   
-  setupUpdated: function(el)
-  {
-    var els = el.select('a');
-    els.each(function(a){
-      var href = a.dom.href;
-      a.dom.href = '#';
-      a.addListener('click', function(panel, href)
-      {        
-        var mgr = panel.getUpdater();
-        mgr.update({
-          url: href,
-          callback: this.setupUpdated,
-          scope: this
-        });
-      }.curry(el, href))
-    }, this);
-  }
 });
