@@ -74,6 +74,12 @@ Ext.AjaxPanel = Ext.extend(Ext.Panel,
       }, this, href)
     }, this);
     
+    var forms = el.select('form');
+    forms.each(function(form)
+    {
+      
+    }, this);
+    
     this.fireEvent('ajaxloadcomplete', this);
   }
 });
